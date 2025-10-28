@@ -111,7 +111,7 @@ Drill down on the ```ukrs01.incidents``` request and select the ```oterBar::Stan
 <br><img src="/exercises/ex2/images/02_01_0022.png" />
 <br><img src="/exercises/ex2/images/02_01_0023.png" />
 
-You can as well find a recent direct link to a good example [here](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap/shell/run?sap-ui-app-id=sap.crun.rum.ui#/Requests/Actions/Executions/b372f270-343b-a971-0000-0000154ec084/?ExecutionTimestamp=2025-10-08T15:09:48Z&ExecutionType=S&NAME1=ukrs01.incidents&NAME2=oterBar%25253A%25253AStandardAction%25253A%25253ASave_press&RECTYPE=SAP_UI5&Scopes=&TimeFrame=INHERIT&User=).
+You can as well find a recent direct link to a good example [here](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap/shell/run?sap-ui-app-id=sap.crun.rum.ui#/Requests/Actions/Executions/91af64fb-5132-fa85-0000-0000154ec084/?ExecutionTimestamp=2025-10-28T14:45:20Z&ExecutionType=S&NAME1=ukrs01.incidents&NAME2=oterBar%25253A%25253AStandardAction%25253A%25253ASave_press&RECTYPE=SAP_UI5&Scopes=&TimeFrame=INHERIT&User=).
 
 <br><img src="/exercises/ex2/images/02_01_0024.png" />
 
