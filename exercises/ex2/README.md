@@ -159,7 +159,7 @@ This opens the detailed transaction trace showing how the incident-management-sr
 **Result**: Visibility into User-interactions with current status information for the deployed workload
 
 **Background**:
-SAP Cloud ALM is a cloud-based application lifecycle management tool included in SAP Cloud Service plans like Enterprise and Large Enterprise Support. It helps organizations manage hybrid and cloud solutions on SAP BTP with guided setup and automation for SAP and custom apps. SAP Cloud ALM is integrated with SAP Cloud Logging for deep dive analysis in various scenarios. In this case it allows further drill-down into the end2end transaction and BTP workload of the ```incident-management-srv``` application for distributed system monitoring (part of this [exercise](#25-sap-cloud-logging---distributed-system-monitoring---trace-analytics-with-opentelemetry))
+SAP Cloud ALM is a cloud-based application lifecycle management tool included in SAP Cloud Service plans like Enterprise and Large Enterprise Support. It helps organizations manage hybrid and cloud solutions on SAP BTP with guided setup and automation for SAP and custom apps. SAP Cloud ALM is integrated with SAP Cloud Logging for deep dive analysis in various scenarios. In this case it allows further drill-down into the end2end transaction and BTP workload of the ```incident-management-srv``` application for distributed system monitoring (see below for more details)
 
 **Further References**:
 - https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal.html
