@@ -132,7 +132,9 @@ Instance memory can be allocated up to the available disk space quota or up to t
 2. **Access Cloud ALM Launchpad:**
    - Navigate directly to [SAP Cloud ALM](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap/launchpad#Shell-home) Launchpad.
    - If prompted for additional authentication, select the identity provider line: `a8z641mqa.accounts.ondemand.com`
-   - **Important**: Do NOT select **Default Identity Provider** 
+
+> [!IMPORTANT]
+> Do *not* select **Default Identity Provider**
 
 <details>
     <summary>📷💡 View screenshot for this step</summary>
@@ -253,7 +255,7 @@ This unified observability approach ensures continuous monitoring coverage despi
 - [SAP Cloud ALM Documentation](https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal.html)
 - [SAP Cloud ALM onboarding and instrumentation](https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/data-collection-infrastructure.html)
 - [SAP Cloud Logging Service Guide](https://help.sap.com/docs/cloud-logging)
-- [BTP Observability Best Practices](https://help.sap.com/docs/btp/best-practices/observability) FIXME - UPDATE TO BTP DEVELOPER GUIDE
+- [BTP Developer Guide on Observability](https://help.sap.com/docs/BTP/0c8c1db388f645159e134a005aaabbcf/34065a44e2ef4907a7482221ce3383ec.html?locale=en-US&state=PRODUCTION&version=Cloud)
 
 
 ## 1.4 Check: Automated Delivery, Governance, and Supply Chain Security
