@@ -258,52 +258,44 @@ This unified observability approach ensures continuous monitoring coverage despi
 - [BTP Developer Guide on Observability](https://help.sap.com/docs/BTP/0c8c1db388f645159e134a005aaabbcf/34065a44e2ef4907a7482221ce3383ec.html?locale=en-US&state=PRODUCTION&version=Cloud)
 
 
-## 1.4 Check: Automated Delivery, Governance, and Supply Chain Security
+## 1.4 Check: Automated Delivery
 
-**Learning Opportunity**: Verify that deployments are fully automated, and secure. Confirm pipelines produce reproducible, validated artifacts. Ensure secrets management, and deployment strategies are in place to enable safe, zero-downtime rollouts.
+**Learning Opportunity**: Verify that deployments are fully automated
 
-#### Step 1: Secure your repository
+#### Step 1: Automated integration and delivery pipelines
 
-Go to your source code management system (git):
+**What you'll see:**
+- SAP BTP Cockpit Instances and Subscriptions overview
+- Continuous Integration and Delivery application 
+- CI/CD success job run
 
-* Protect your main branch, set up rules for merging: Require a pull request before merging.
-* Collaborators and teams: enforce least privilege and use role-based access with periodic access reviews.
+**Actions to perform:**
 
-#### Step 2: Ensure update dependency update strategy is in place
+1. **Navigate to Continuous Integration and Delivery application:**
+   - Access BTP Cockpit and navigate to your Cloud Foundry space
+   - Go to **Services** → **Instances and Subscriptions**
+   - Locate the Application → Continuous Integration and Delivery
 
-After GA it is required to permanently monitor and update dependencies. 
-To reduce manual efforts, various apps exist (Dependabot, Renovate), that automatically open pull/merge requests to update your dependencies:
+<details>
+    <summary>📷💡 View screenshot for this step</summary>
+    <br><img src="/exercises/ex1/images/01_04_0001.png" />
+    <br><img src="/exercises/ex1/images/01_04_0002.png" />
+    <br><img src="/exercises/ex1/images/01_04_0003.png" />
+    <br><img src="/exercises/ex1/images/01_04_0004.png" />
+    <br><img src="/exercises/ex1/images/01_04_0005.png" />
 
-* Access the git repository and adjust the security settings. E.g. in Github: Settings -> Code Security or Advanced Security
-* enable Security and/or Version Updates
+*BTP Cockpit navigation path to Continuous Integration and Delivery application* 
+</details>    
 
-#### Step 3: Automated integration and delivery pipelines
+
 Automated CI/CD pipelines help you to validate changes and updates of your app automatically. A comprehensive set of unit and integration tests with reasonable test coverage will help to detect regressions quickly and with minimal effort. To set up your own CI/CD pipelines using SAP Continuous Integration and Delivery:
 
-* Enable SAP Continuous Integration and Delivery in a development subaccount and add the required permissions - make sure you have the "CICD Service Administrator" role collection.
-* Enter the service and setup a repository: Select the Repositories pane and add a new repository. Enter the clone URL and credentials. Save your settings.
-* Switch to the "Jobs" tab and add a new job. Select the repository you just created and select the "Cloud Foundry environment" pipeline.
-* Check the "Build" stage and make sure the "Build Tool" selected is "mta". Save your settings.
-* Run your job. If the build succeeds, add the release stage and configure the deployment.
-* Add steps like code scans, integration and acceptance tests to further improve the validation.
-  
-More detaíls on pipeline setup is available in [this tutorial](https://developers.sap.com/tutorials/cicd-start-fiori..html).
+<br><img src="/exercises/ex1/images/01_04_0006.png" />
 
-
-#### Step 4: For a production deployment without downtimes, verify blue/green deployment indicators (zero downtime deployments)
-To avoid any impact on your end-users make sure blue green deployment is configured in SAP Continuous Integration and Delivery:
-
-<img width="367" height="197" alt="image" src="https://github.com/user-attachments/assets/e36ca9c1-b4dd-4bd4-af55-e00a4f556cf9" />
-
-
-#### Step 5: CI/CD specific security recommendations
-Check and follow [security recommendations](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/security-recommendations-42fa013e0bb74506abc6a606def095b7?locale=en-US) for SAP Continuous Integration and Delivery.
-
-<br>![](/exercises/ex2/images/02_01_0040.png)
 
 #### Exercise Summary
 
-**Result**: Improved supply chain security, validation and delivery is automated using SAP Continuous Integration and Delivery.
+**Result**: Improved validation and delivery is automated using SAP Continuous Integration and Delivery.
 
 **Background**:
 After GA, changes are still made to the application. New features, security patches and version updates need to be validated and deployed. Setting up CI/CD pipelines to automate these tasks reduces maintenance efforts significantly.

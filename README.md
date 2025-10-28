@@ -41,7 +41,7 @@ Walk away with confidence to approve production releases, armed with practical s
 
 ## Exercises
 
-- [Exercise 0 - General Information and Prerequisites (Optional)](exercises/ex0/)
+- [Getting Started - General Information and Prerequisites (Optional)](exercises/ex0/)
     - [Scenario Description And System Landscape](exercises/ex0#scenario-description-and-system-landscape)
     - [Start here and get access to the Backend System and BTP Cockpit](exercises/ex0#start-here-and-get-access-to-the-backend-system-and-btp-cockpit)
     - [Start here to understand your target application](exercises/ex0#start-here-to-understand-your-target-application)
