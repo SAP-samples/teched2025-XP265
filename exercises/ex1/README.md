@@ -14,7 +14,7 @@ You will be executing the following assessments as part of the exercise.
 - [1.1 Platform health monitoring and log collection integrity](#11-check-basic-platform-monitoring-and-log-validation)
 - [1.2 Instance sizing adequacy for expected load patterns  ](#12-check-instance-sizing-validation)
 - [1.3 Full operational access and observability tool integration (SAP Cloud ALM, Cloud Logging)](#13-check-observability-tool-validation---sap-cloud-logging-and-sap-cloud-alm-connection-validation)
-- [1.4 Emergency response procedures and CI/CD pipeline readiness](#14-check-automated-delivery-governance-and-supply-chain-security)
+- [1.4 Emergency response procedures and CI/CD pipeline readiness](#14-check-automated-delivery)
 
 Each check directly supports the operational excellence required for your upcoming launch, ensuring you have sizing, monitoring, and troubleshooting capabilities in place before real users depend on your system.
 
@@ -274,7 +274,7 @@ This unified observability approach ensures continuous monitoring coverage despi
 1. **Navigate to Continuous Integration and Delivery application:**
    - Access BTP Cockpit and navigate to your Cloud Foundry space
    - Go to **Services** → **Instances and Subscriptions**
-   - Locate the Application → Continuous Integration and Delivery
+   - Locate the Application → "**[Continuous Integration and Delivery](https://xp265-shared-4t2shozq.eu10.cicd.cloud.sap/ui/index.html)**"
 
 <details>
     <summary>📷💡 View screenshot for this step</summary>
