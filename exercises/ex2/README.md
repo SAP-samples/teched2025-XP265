@@ -264,7 +264,17 @@ The CF Overview dashboard displays key performance indicators (KPIs) for request
 <br><img src="/exercises/ex2/images/02_02_0024.png" />
 *Other Navigation Options and Build-in Dashboards*
 
-Cloud Logging provides an OpenSearch Dashboards interface which includes eight predefined dashboards that are automatically maintained and updated for you: **CF Overview** (general application request log and application log overview), **Top Apps** (Key performance indicators of all applications), **Four Golden Signals** (latency, traffic, errors, and saturation metrics), **Usage** (Request based application utilization and consumption patterns), **Performance and Quality** (application response), **History** (historical trends and trend analysis), "Requests and Logs" (detailed log analytics), and "App Crash Detection" (application failure monitoring). Users can switch between Cloud Foundry and Kyma (Kyma not relevant in this Hands-on-Session).
+Cloud Logging provides an OpenSearch Dashboards interface which includes eight predefined dashboards that are automatically maintained and updated for you:
+- **CF Overview** - general application request log and application log overview
+- **Top Apps** - Key performance indicators of all applications
+- **Four Golden Signals** - latency, traffic, errors, and saturation metrics
+- **Usage** - Request based application utilization and consumption patterns
+- **Performance and Quality** - application response
+- **History** - historical trends and trend analysis
+- **Requests and Logs** - detailed log analytics)
+- **App Crash Detection** - application failure monitoring
+
+Users can switch between Cloud Foundry and Kyma (Kyma not relevant in this Hands-on-Session).
 
 #### Exercise Summary
 **Result**: CLS visualizes Key Performance Indicators of Requests Logs and Application Logs over time and provides analytical interface to assess overall application state along multiple dimensions.
@@ -591,6 +601,10 @@ SAP Cloud Logging's Distributed System Monitoring enables DevOps teams to proact
 - [Google SRE Book - Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/#xref_monitoring_golden-signals)
 - [Cloud Foundry Container Metrics Documentation](https://docs.cloudfoundry.org/running/all_metrics.html)
 - [SAP Cloud Logging Service Documentation](https://help.sap.com/docs/cloud-logging)
+- [SAP BTP Connectivity - Administration](https://help.sap.com/docs/CP_CONNECTIVITY/cca91383641e40ffbe03bdc78f00f681/78198e8b58f949af977e579b5de42299.html)
+- [Cloud Connector - Administration](https://help.sap.com/docs/CP_CONNECTIVITY/cca91383641e40ffbe03bdc78f00f681/dfec06d670ff4e2e938d9fdd985e5230.html)
+- [Cloud Connector - Monitoring](https://help.sap.com/docs/CP_CONNECTIVITY/cca91383641e40ffbe03bdc78f00f681/6d9c937dd35344bca3eb61ebf34a5c1d.html)
+- [Cloud Connector - Logging, and Troubleshooting](https://help.sap.com/docs/CP_CONNECTIVITY/cca91383641e40ffbe03bdc78f00f681/e7df7f15bb571014ae24bca245319880.html)
 
 ## Summary
 
