@@ -12,8 +12,7 @@ TARGET_URL="https://xp265-shared-xp265-incident-management-srv.cfapps.eu10-004.h
 
 # Duration, default 10m, allow override via first arg
 MINUTES="${1:-10m}"
-NO_OF_REQUESTS=${2:-20000}
-REQUESTS_PER_SECOND=${3:-500}
+REQUESTS_PER_SECOND=${2:-500}
 
 echo "Obtaining OAuth token..."
 # Prefer Basic Auth, avoid putting secrets into the form body
@@ -29,8 +28,11 @@ if [[ -z "${TOKEN}" || "${TOKEN}" == "null" ]]; then
 fi
 echo "OAuth token obtained"
 
-echo "Starting load test for ${MINUTES} ..."
-oha -n "${NO_OF_REQUESTS}" -q "${REQUESTS_PER_SECOND}" \
+echo "Starting load test for ${MINUTES} with ${REQUESTS_PER_SECOND} r/s ..."
+echo "Press Enter to continue..."
+read
+
+oha -z "${MINUTES}" -q "${REQUESTS_PER_SECOND}" \
   -H "Authorization: Bearer ${TOKEN}" \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
