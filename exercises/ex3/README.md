@@ -139,3 +139,5 @@ You have now completed the exercise and learned
 # References
  - [Application Autoscaler Service Documentation](https://discovery-center.cloud.sap/serviceCatalog/application-autoscaler?service_plan=standard&region=all&commercialModel=btpea&tab=)
  - [Understand CPU and CPU Entitlement Metrics](https://community.sap.com/t5/technology-blog-posts-by-sap/application-scalability-with-cpu-utilization-metric-in-cloud-foundry/ba-p/13696223)
+ - [Cloud Connector - Sizing Recommendations](https://help.sap.com/docs/CP_CONNECTIVITY/cca91383641e40ffbe03bdc78f00f681/f0084943389a4112bd441c0e014efd04.html)
+ - [Cloud Connector - Configure Advanced Connectivity](https://help.sap.com/docs/CP_CONNECTIVITY/cca91383641e40ffbe03bdc78f00f681/3975253c1a884638bf6f408f55ea349e.html)

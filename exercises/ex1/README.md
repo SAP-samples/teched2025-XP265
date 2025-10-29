@@ -308,6 +308,4 @@ After GA, changes are still made to the application. New features, security patc
 
 Your production readiness validation confirms your system is properly configured and enterprise-ready. But here's the reality: passing pre-flight checks is just the beginning. When your application goes live in 48 hours, the real operational challenge begins—and that's where most teams stumble.
 
-*Time to level up from deployment-ready to operations-mastery. - Continue to - [Exercise 2 -  Operational Intelligence](../ex2/README.md)*
-
-
+*Time to level up from deployment-ready to operations-mastery. - Continue to - [Exercise 2 -  Observability](../ex2/README.md)*
