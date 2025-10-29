@@ -51,7 +51,7 @@ Walk away with confidence to approve production releases, armed with practical s
     - [1.1 Check: Basic Platform Monitoring and Log Validation](exercises/ex1#11-check-basic-platform-monitoring-and-log-validation)
     - [1.2 Check: Instance Sizing Validation](exercises/ex1#12-check-instance-sizing-validation)
     - [1.3 Check: Observability Tool Validation - SAP Cloud Logging and SAP Cloud ALM Connection Validation](exercises/ex1#13-check-observability-tool-validation---sap-cloud-logging-and-sap-cloud-alm-connection-validation)
-    - [1.4 Check: Automated Delivery, Governance, and Supply Chain Security](exercises/ex1#14-check-automated-delivery-governance-and-supply-chain-security)
+    - [1.4 Check: Automated Delivery](exercises/ex1#14-check-automated-delivery)
     - [Summary](exercises/ex1#summary)
 - [Exercise 2 - Observability](exercises/ex2/)
     - [2.1 SAP Cloud ALM - Central Observability with Real User Monitoring](exercises/ex2#21-sap-cloud-alm---central-observability-with-real-user-monitoring)
