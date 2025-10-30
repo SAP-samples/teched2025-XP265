@@ -1,6 +1,6 @@
 # Exercise 2 - Observability
 
-**Mission Control: Gaining Operational Intelligence**
+**Mission Control: Gaining Operational Intelligence with Observability**
 
 Your production readiness checks are complete, but now comes the real test: Can you actually *see* what's happening inside your system when it matters most? During your upcoming public launch, you'll need more than basic monitoring—you need deep operational intelligence to proactively identify issues and respond faster than problems can escalate.
 
@@ -8,8 +8,8 @@ Your production readiness checks are complete, but now comes the real test: Can 
 Transform from blind faith to data-driven confidence by championing SAP BTP's enterprise observability capabilities. You'll dive deep into your incident management application's runtime behavior, learning to interpret the signals that separate healthy systems from those heading toward failure.
 
 **Operational Intelligence Toolkit:**
-- **SAP Cloud ALM Central Observability** - See your application through actual user experiences and catch performance degradation before complaints arrive
-- **SAP Cloud Logging Analytics** - Decode system state from log patterns and trace distributed requests across your microservices architecture  
+- **SAP Cloud ALM - Central Observability** - See your application through actual user experiences and catch performance degradation before complaints arrive - related to **problem detection**
+- **SAP Cloud Logging - Local Observability** - Decode system state from log patterns and trace distributed requests across your microservices architecture - related to **problem resolution**
 
 **The Stakes:**
 When your system goes public and real users start creating incidents, you need to distinguish between normal traffic spikes and actual problems. Champion these observability tools now, because during a production incident, your monitoring dashboards become your mission control center.
@@ -60,13 +60,13 @@ When your system goes public and real users start creating incidents, you need t
 
 #### Prerequisites
 
-Login to the system as described in the [General Section](../ex0/README.md#start-here-and-get-access-to-the-backend-system-and-btp-cockpit)
+If prompted below for "Sign In", you can follow the login description to the system as described in the [General Section](../ex0/README.md#start-here-and-get-access-to-the-backend-system-and-btp-cockpit)
 
 
 ## 2.1 SAP Cloud ALM - Central Observability with Real User Monitoring
 
 
-**Learning Opportunity**: After completing these steps you will be able to understand how user interact with your system landscape
+**Learning Opportunity**: After completing these steps you will be able to understand how user interact with your system landscape and see their interactions in Observability solutions.
 
 #### Prerequisites
 
@@ -79,10 +79,12 @@ Upon successful onboarding to SAP Cloud ALM, your organization will receive a co
 *Example of an onboarding Email - just provided as example*
 </details>
 
-For This Exercise a direct link to the SAP Cloud ALM tenant is provided below for convenience during this hands-on session. You don't need to access your Email-program.
+For This Exercise a direct link to the **[SAP Cloud ALM tenant](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap)** is provided below for convenience during this hands-on session. You don't need to access your Email-program.
 
 > [!NOTE]
 > In production environments, always use the official tenant URL provided in your individual onboarding email of your Company.
+
+In [Exercise 1](../ex1/README.md#13-check-observability-tool-validation---sap-cloud-logging-and-sap-cloud-alm-connection-validation) we already showed the **Launchpad** of SAP Cloud ALM and the tile **Real User Monitoring** now we build upon that. 
 
 #### Step 1. Navigate to the [real-user monitoring tile](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap/shell/run?sap-ui-app-id=sap.crun.rum.ui) in SAP Cloud ALM
 if you are prompted for a additional Sign In, select the line stating ```a8z641mqa.accounts.ondemand.com```and NOT the ```Default Identity Provider```
@@ -95,60 +97,67 @@ if you are prompted for a additional Sign In, select the line stating ```a8z641m
 
 #### Step 2. Select the Workzone component
 
- If you open the Real User Monitoring app the first time, you will be prompted to select the ```Select a Scope``` - select ```XP265_WZ```.
+Only if you open the Real User Monitoring app the **first time**, you will be prompted to select the ```Select a Scope``` - select ```XP265_WZ```.
 
 > [!NOTE]
 > At any subsequent login, the Real User Monitoring app will directly show a previously selected Scope. To modify this, use the "Scope Selection" via the "Scope"-icon in the top navigation bar to the right. 
 
+<details>
+    <summary>📷💡 View screenshot for this step</summary>
+
 <br><img src="/exercises/ex2/images/02_01_0021.png" />
+</details>
 
 Our app is regularly checked with a synthetic browser monitor and a scenario of Incident Management is being clicked through. While the browser sees the workzone component initially, internally calls are being made to backend components, the database and the S4/HANA system.
 
+1. Click on **XP265_WZ** to see a list of individual requests sent to the backend 
+<br><img src="/exercises/ex2/images/02_01_0011.png" />
+*SAP Cloud ALM navigate to the Workzone tile and preparation for Step 3*
+
 #### Step 3. Review an individual requests executed by synthetic clients
 
-Drill down on the ```ukrs01.incidents``` request and select the ```oterBar::StandardAction::Save_press``` action. When the save action is pressed, an incident has a change status, respective backend-calls and database statements persisting the new status can be seen.
+Drill down on the ```ukrs01.incidents``` request and select the ```oterBar::StandardAction::Save_press``` action. When the save action is pressed, an incident has a change status, respective backend-calls and database statements persisting the new status can be seen in our Observability solutions.
 
 <br><img src="/exercises/ex2/images/02_01_0022.png" />
+
+1. Select a row with a higher "Response Time" in the "Execution Time" column (these typically involve more processing and backend calls, making them more informative for analysis).
+
+Alternatively you can as well find a direct link to a good example [here](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap/shell/run?sap-ui-app-id=sap.crun.rum.ui#/Requests/Actions/Executions/91af64fb-5132-fa85-0000-0000154ec084/?ExecutionTimestamp=2025-10-28T14:45:20Z&ExecutionType=S&NAME1=ukrs01.incidents&NAME2=oterBar%25253A%25253AStandardAction%25253A%25253ASave_press&RECTYPE=SAP_UI5&Scopes=&TimeFrame=INHERIT&User=).
+
+
 <br><img src="/exercises/ex2/images/02_01_0023.png" />
 
-You can as well find a recent direct link to a good example [here](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap/shell/run?sap-ui-app-id=sap.crun.rum.ui#/Requests/Actions/Executions/91af64fb-5132-fa85-0000-0000154ec084/?ExecutionTimestamp=2025-10-28T14:45:20Z&ExecutionType=S&NAME1=ukrs01.incidents&NAME2=oterBar%25253A%25253AStandardAction%25253A%25253ASave_press&RECTYPE=SAP_UI5&Scopes=&TimeFrame=INHERIT&User=).
 
 <br><img src="/exercises/ex2/images/02_01_0024.png" />
 
 
-#### Step 4. Explore the single transaction
+#### Step 4. Explore the single transaction with different views
 
 The diagram displays all components and their interactions. Hover over different tiles to explore relevant KPIs including response times, transaction identifiers, request sizes, and more.
 
-<details>
-    <summary>📷💡 View screenshot for this step</summary>
-    <br><img src="/exercises/ex2/images/02_01_0025.png" />
-</details>
-
+<br><img src="/exercises/ex2/images/02_01_0025.png" />
 
 Use your mouse to zoom out and pan to understand the complete transaction flow from frontend to backends.
 
-Use the "Timeline" view (top right) to consolidate traces and expand specific sections (e.g., database spans) for detailed performance analysis. 
+Use the **Timeline** view (top right) to consolidate traces and expand specific sections (e.g., database spans) for detailed performance analysis. 
 
-Then deselect the "Timeline" view again and navigate to "Orientation: Left to Right" (2 icons to the left).
+<br><img src="/exercises/ex2/images/02_01_0026.png" />
 
-<details>
-    <summary>📷💡 View screenshot for this step</summary>
-    <br><img src="/exercises/ex2/images/02_01_0026.png" />
-</details>
+Then deselect the "**Timeline**" view again and navigate to "**Orientation: Left to Right**" (2 icons to the left).
 
 
-While the Workzone component is a SaaS service provided by SAP, your team is responsible for the ```incident-management-srv``` app. In the next step, we'll switch from Central Observability to Local Observability using SAP Cloud Logging.
+> [!NOTE]
+> While the Workzone component is a SaaS service provided by SAP, your team is responsible for the ```incident-management-srv``` app. In the next step, we'll switch from Central Observability to Local Observability using SAP Cloud Logging.
 
 
 #### Step 5. Check availability of a navigation link towards SAP Cloud Logging Service
 
-On the ```incident-management-srv``` tile, click the link icon and select ```Show detailed trace in Cloud Logging``` from the popup menu.
+**Actions to perform:**
+1. Switch back to the **Orientation: Left to right"** view or **Orientation: Top to Bottom** view (top right) - if not performed as part of Step 4.
 
-<details>
-    <summary>📷💡 View screenshot for this step</summary>
-    <br><img src="/exercises/ex2/images/02_01_0027.png" />
-</details>
+2. On the ```incident-management-srv``` tile, click the link icon and select ```Show detailed trace in Cloud Logging``` from the popup menu.
+
+<br><img src="/exercises/ex2/images/02_01_0027.png" />
 
 
 This opens the detailed transaction trace showing how the incident-management-srv app executed the request. You'll see the individual OpenTelemetry spans and their processing times.
@@ -196,7 +205,7 @@ Complete the previous exercise or navigate directly through the [BTP Cockpit](ht
     <br><img src="/exercises/ex2/images/02_02_0020.png" />
 </details>
 
-When accessing SAP Cloud Logging for the first time, you may need to authenticate. Follow the sign-in process outlined in the [General Section](../ex0/README.md#start-here-and-get-access-to-the-backend-system-and-btp-cockpit) using your assigned credentials.
+When accessing SAP Cloud Logging for the first time, you may need to authenticate. Optionally look-up the sign-in process outlined in the [General Section](../ex0/README.md#start-here-and-get-access-to-the-backend-system-and-btp-cockpit) using your assigned credentials - otherwise use the direct links below, authentication will pop up, if required.
 
 #### Step 1. Navigate to SAP Cloud Logging
 
@@ -231,7 +240,7 @@ Navigate to the **[CF Overview](https://dashboards-sf-e1bf1f9f-be6a-4a59-9980-09
 **What you'll see:**
 The CF Overview dashboard displays key performance indicators (KPIs) for request and application logs across all your Cloud Foundry applications at a glance.
 
-**Actions to perform:**
+**Actions to perform: (screenshots provided below with one possible click-path)**
 
 1. **Explore KPI metrics:**
    - Review response times and requests per second across applications on the left side called "Request Overview"
@@ -249,32 +258,38 @@ The CF Overview dashboard displays key performance indicators (KPIs) for request
    - Click on a specific log level (e.g., **info**) to examine:
      - Volume of log messages at that level
      - Which loggers are producing the messages
+> [!NOTE] 
+> "Requests Overview" dashboard showing "No request logs during this step, as we filtered out all request-logs.
 
 5. **Drill-up back to all components:**
-   - Use the **pinned navigation** at the top of the dashboard
+Now we "drill-up" and deselect or reverse the filters we did set 
+   - Use the **pinned navigation** at the top of the dashboard (by pressing the small "x")
    - Remove or exclude pinned filter items to return to the complete component view
 
 <br><img src="/exercises/ex2/images/02_02_0023.png" />
 *Main click path to filter, slice and dice on the CF Overview dashboard*
 
 
-#### Step 4. Review the other dashboards available within SAP Cloud Logging
+#### Step 4. Briefly review other dashboards available within SAP Cloud Logging
 
-
-<br><img src="/exercises/ex2/images/02_02_0024.png" />
-*Other Navigation Options and Build-in Dashboards*
 
 Cloud Logging provides an OpenSearch Dashboards interface which includes eight predefined dashboards that are automatically maintained and updated for you:
 - **CF Overview** - general application request log and application log overview
 - **Top Apps** - Key performance indicators of all applications
-- **Four Golden Signals** - latency, traffic, errors, and saturation metrics
+- **Four Golden Signals** - latency, traffic, errors, and saturation metrics 
 - **Usage** - Request based application utilization and consumption patterns
-- **Performance and Quality** - application response
+- **Performance and Quality** - application response time analysis
 - **History** - historical trends and trend analysis
-- **Requests and Logs** - detailed log analytics)
-- **App Crash Detection** - application failure monitoring
+- **Requests and Logs** - detailed log analytics for application, request and runtime logs
+- **App Crash Detection** - application failure monitoring based on runtime logs
 
-Users can switch between Cloud Foundry and Kyma (Kyma not relevant in this Hands-on-Session).
+> [!NOTE]
+> Feel free to briefly explore these other dashboards shown in the screenshot below. We'll examine several of them in detail during the upcoming exercises, so there's no need to dive deep at this stage
+
+<br><img src="/exercises/ex2/images/02_02_0024.png" />
+*Other Navigation Options and Build-in Dashboards*
+
+On the right navigation users can switch between Cloud Foundry and Kyma (Kyma not relevant in this Hands-on-Session).
 
 #### Exercise Summary
 **Result**: CLS visualizes Key Performance Indicators of Requests Logs and Application Logs over time and provides analytical interface to assess overall application state along multiple dimensions.
@@ -339,6 +354,7 @@ The log analytics capability of SAP Cloud Logging transforms raw operational dat
    - Locate the **"Drill Down"** filtering options below the **Runtime Logs** section
 
 2. **Filter by application instance:**
+Since our production setup runs across multiple instances, we'll focus specifically on the runtime logs from a single instance. Let's apply a filter to isolate these logs.
    - Use the **Filter** controls to filter on a specific instance (e.g., instance with Name **"0"**)
    - Observe how this isolates runtime events for a single application instance
 
@@ -350,14 +366,11 @@ The log analytics capability of SAP Cloud Logging transforms raw operational dat
    - Select **"Maximize"** to expand the panel to full-screen view
    - Review deployment steps, container restarts, crashes, and other platform-level events
 
-<details>
-    <summary>📷💡 View screenshot for this step</summary>
-    <br><img src="/exercises/ex2/images/02_03_0023.png" />
+<br><img src="/exercises/ex2/images/02_03_0023.png" />
 
 *The maximized Runtime Logs panel providing detailed view of platform events and deployment history*
-</details>
 
-4. **Return to overview:**
+2. **Return to overview:**
    - Use the **three-dot context menu** again to **minimize** the panel
    - Return to the full **"Requests and Logs"** overview displaying all three panels
 
@@ -418,7 +431,7 @@ Distributed System Monitoring of SAP Cloud Logging helps DevOps teams proactivel
 #### Step 1. Navigate and explore the Four Golden Signals dashboard overview
 
 **What you'll see:**
-- The main Four Golden Signals dashboard with four distinct panels representing Latency, Traffic, Errors, and Saturation
+- The main **[Four Golden Signals](https://dashboards-sf-e1bf1f9f-be6a-4a59-9980-0918531dd856.cls-17.cloud.logs.services.eu10.hana.ondemand.com/app/dashboards?security_tenant=global#/view/maintained-by-perfx_cf-content-package_CF-Four-Golden-Signals?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-5h,to:now))&_a=(description:'Quickly%20gauge%20the%20state%20of%20your%20applications%20and%20spot%20possible%20issues%20%5Bmaintained%20by%20SAP%5D',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!f),query:(language:kuery,query:''),timeRestore:!f,title:'CF%20Four%20Golden%20Signals',viewMode:view))** dashboard with four distinct panels representing Latency, Traffic, Errors, and Saturation
 - Time series charts showing metrics over the selected time range (default: last 5 hours)
 - Navigation tabs for **All Signals**, **Latency**, **Traffic**, **Errors**, **Saturation**, and **Container Metrics**
 - Interactive visualization elements with drill-down capabilities
@@ -439,19 +452,16 @@ Distributed System Monitoring of SAP Cloud Logging helps DevOps teams proactivel
 *The Four Golden Signals Dashboard showing all signal panels with comprehensive metrics overview*
 
 3. **Reset time range to broader view:**
-   - Click on the **Start Date** field in the top-right corner
-   - Select **Relative** from the dropdown
+   - Click on **Quick select**-icont left to the **Start Date** field in the top-right 
+   - Select **Last** from the dropdown (if required)
    - Set the value to **5** **hours**
-   - Click on **End Date**, select **Now**, then click **Set end date and time to now**
+   - Click on **Apply**
 
-<details>
-    <summary>📷💡 View screenshot for this step</summary>
-    <br><img src="/exercises/ex2/images/02_04_0021.png" />
+<br><img src="/exercises/ex2/images/02_04_0021.png" />
 
 *Time range configuration interface showing relative time selection for 5 hours from now*
-</details>
 
-4. **Navigate to Latency dashboard:**
+1. **Navigate to Latency dashboard:**
    - Click on the **[Latency](https://dashboards-sf-e1bf1f9f-be6a-4a59-9980-0918531dd856.cls-17.cloud.logs.services.eu10.hana.ondemand.com/app/dashboards?security_tenant=global#/view/maintained-by-perfx_cf-content-package_CF-Latency?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-5h,to:now))&_a=(description:'Use%20the%20Latency%20dashboard%20to%20investigate%20the%20latency%20of%20your%20system%20and%20applications.%20%5Bmaintained%20by%20SAP%5D',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!f),query:(language:kuery,query:''),timeRestore:!f,title:'CF%20Latency',viewMode:view))** tab in the navigation menu to perform Step 2
 
 

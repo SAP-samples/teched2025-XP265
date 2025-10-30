@@ -41,6 +41,8 @@ A "Sign In" screen will appear (if asked). Enter your credentials provided by yo
 
 **Result**: You know how to log in to SAP Business Technology Platform and have a brief overview of the SAP BTP cockpit. 
 
+Alternatively you can now directly start with [Exercise 1 - Production Readiness Check](../ex1/README.md) or you continue below to access and understand the app you are responsible for - the [Incident Management app](https://xp265-shared-4t2shozq.launchpad.cfapps.eu10.hana.ondemand.com/site?siteId=f7652fdf-d61e-4cec-95d9-bcd5e64fc13c#incidents-display?sap-ui-app-id-hint=saas_approuter_ukrs01.incidents&/?sap-iapp-state=TAS1LR6TOCWJTQLQQG421CCSSCBH610QPYEH7HF46).
+
 ## Start here to understand your target application
 
 This chapter provides a brief overview of the Incident-Management application and walks through the key user journey you'll be supporting as an operator.

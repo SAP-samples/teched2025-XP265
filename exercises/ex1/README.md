@@ -32,22 +32,32 @@ Each check directly supports the operational excellence required for your upcomi
 #### Step 1. Check recent logs for your application
 
 Inside the SAP BTP Cockpit click on Subaccount **[XP265_SHARED](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/subaccountoverview)**  
-<br>![](/exercises/ex1/images/01_01_0001.png)  
-* Click on Cloud Foundry - Spaces on the left side  
-<br>![](/exercises/ex1/images/01_01_0002.png)
-* Click on **XP265**   
-* Click on Application **incident-management-srv**   
-* Click on Logs on the left menu
 
-  In the **[Application: incident-management-srv - Logs](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/org/6c903df1-d869-4d7d-8483-6f306d5962c7/space/0cb720c5-4bc3-4eb6-8b93-60f0f4d23904/app/d1fbbec7-6739-49db-a815-33927ad3b0ea/logs)** we can check the current application logs:  
+<details>
+    <summary>📷💡 View example Onboarding Email</summary>
+<br>![](/exercises/ex1/images/01_01_0001.png)  
+</details>
+<br>
+
+**Actions to perform:**
+1. Click on **Cloud Foundry** and then **Spaces** in the left navigation pane  
+<br>![](/exercises/ex1/images/01_01_0002.png)
+2. Click on **XP265**   
+3. Select the application **incident-management-srv** in the list of applications.   
+4. Click on **Logs** on the left menu
+
+In the **[Application: incident-management-srv - Logs](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/org/6c903df1-d869-4d7d-8483-6f306d5962c7/space/0cb720c5-4bc3-4eb6-8b93-60f0f4d23904/app/d1fbbec7-6739-49db-a815-33927ad3b0ea/logs)** (optional direct link) we can check the current application logs:  
+
 <br>![](/exercises/ex1/images/01_01_0003.png)
 
 
 #### Step 2. Check recent metrics for your application
 
-* Click on Overview on the left menu
+**Actions to perform:**
+1. Click on **Overview** on the left menu again
 
-In the **[Application: incident-management-srv - Overview](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/org/6c903df1-d869-4d7d-8483-6f306d5962c7/space/0cb720c5-4bc3-4eb6-8b93-60f0f4d23904/app/d1fbbec7-6739-49db-a815-33927ad3b0ea/overview)** we can check the current application capacity utilization and events:  
+In the **[Application: incident-management-srv - Overview](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/org/6c903df1-d869-4d7d-8483-6f306d5962c7/space/0cb720c5-4bc3-4eb6-8b93-60f0f4d23904/app/d1fbbec7-6739-49db-a815-33927ad3b0ea/overview)** (optional direct link) we can check the current application capacity utilization and events:
+
 <br>![](/exercises/ex1/images/01_01_0004.png)
 
 #### Exercise Summary
@@ -56,6 +66,8 @@ In the **[Application: incident-management-srv - Overview](https://emea.cockpit.
 container/runtime metrics provided by Cloud Foundry like the CPU utilization, memory usage, and disk usage per app instance, plus instance state.
 
 **Background**:
+The **SAP BTP cockpit** is the central interface for managing your SAP Business Technology Platform environment. It provides account management, service provisioning, security configuration, and real-time monitoring capabilities, enabling administrators to efficiently manage their BTP landscape.
+
 The SAP BTP cockpit's Logs page displays application logs and related Cloud Foundry component logs for quick troubleshooting of recent application issues. For long-term log analytics, see [Exercise 2](../ex2/README.md) covering SAP Cloud Logging capabilities.
 
 
@@ -66,7 +78,7 @@ The SAP BTP cockpit's Logs page displays application logs and related Cloud Foun
 
 ## 1.2 Check: Instance Sizing Validation
 
-**Learning Opportunity**: Is the application sufficiently sized with an adequate number of instances?
+**Learning Opportunity**: During this step you will be able to validate that the application is sufficiently sized with an adequate number of instances for high availability and load distribution.
 
 #### Step 1. Validate the number of Instances per Application
 
@@ -75,17 +87,17 @@ The SAP BTP cockpit's Logs page displays application logs and related Cloud Foun
 
 #### Step 2. Explore the Memory and Disk Settings per Instance
 
-- Navigate up one level to the list of Cloud Foundry Applications in BTP Cockpit
-- Review each microservice application
-- Check the **Instance Details** column for Disk and Memory per instance
-- Check the **Instances** column shows minimum 2 running instances
-- Cross-reference with application performance metrics if available
+1. Navigate up one level to the list of Cloud Foundry Applications in BTP Cockpit
+2. Review each microservice application
+3. Check the **Instance Details** column for Disk and Memory per instance
+4. Check the **Instances** column shows minimum 2 running instances
+5. Cross-reference with application performance metrics if available
 
 <br>![](/exercises/ex1/images/01_02_0002.png)
 
 #### Exercise Summary
 
-**Result**: Applications are running with minimum required instances for high availability. 
+**Result**: Applications are running with minimum required instances for high availability and load distribution.
 
 **Background**:
 In SAP BTP Cloud Foundry, your applications run in containers that can be moved around by the platform at any time due to Diego container management and platform maintenance operations. When an application instance is moved or restarted, there's a brief period where it's not ready to handle requests.
@@ -121,8 +133,8 @@ Instance memory can be allocated up to the available disk space quota or up to t
 
 **Actions to perform:**
 
-1. **Check onboarding notification:**
-   - Locate the Cloud ALM onboarding email in your inbox (We just display an example below)
+1. **Check onboarding notification information:**
+   - Locate the Cloud ALM onboarding email exposing your endpoint details in your inbox. (Note: The example below is for reference only—no need to check your actual email during this hands-on workshop.)
    - Note the specific tenant and access details
 
     <br><img src="/exercises/ex2/images/02_01_0019.png" />
@@ -172,8 +184,8 @@ Instance memory can be allocated up to the available disk space quota or up to t
 
 1. **Navigate to Cloud Logging instance:**
    - Access BTP Cockpit and navigate to your Cloud Foundry space
-   - Go to **Services** → **Service Instances**
-   - Locate the Cloud Logging service instance
+   - Go to **Services** → **[Instances](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/org/6c903df1-d869-4d7d-8483-6f306d5962c7/space/0cb720c5-4bc3-4eb6-8b93-60f0f4d23904/service-instances&//?layout=OneColumn)** in the left navigation bar
+   - Locate the cell "Cloud Logging" at the bottom of the "Instances" list (do not click the blue hyperlink called "xp265-cl" for now!)
 
 <details>
     <summary>📷💡 View screenshot for this step</summary>
@@ -188,7 +200,7 @@ Instance memory can be allocated up to the available disk space quota or up to t
 
 *Service instances overview and where to select "SAP Cloud Logging"*
 
-2. **Validate service plan capacity & application binding:**
+1. **Validate service plan capacity & application binding:**
    - Click on the main Cloud Logging service instance to [open details](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/org/6c903df1-d869-4d7d-8483-6f306d5962c7/space/0cb720c5-4bc3-4eb6-8b93-60f0f4d23904/service-instances&//detail/e1bf1f9f-be6a-4a59-9980-0918531dd856/?layout=TwoColumnsMidExpanded)
    - Verify the **Service Plan** shows "standard" or "large"
    - Verify the **Bound Application** shows "incident-management-srv" and "incident-feedback-srv"
@@ -213,14 +225,15 @@ Instance memory can be allocated up to the available disk space quota or up to t
 
 1. **Access Cloud Logging interface:**
    - From the service instance details above, click on the link "xp265-cl" in the beginning of the row OR navigate directly to the main [Cloud Logging Service (CLS)](https://dashboards-sf-e1bf1f9f-be6a-4a59-9980-0918531dd856.cls-17.cloud.logs.services.eu10.hana.ondemand.com/app/dashboards#/view/maintained-by-perfx_using-your-instance-content-package_Using-your-CLS-instance?_g=h@42b0d52&_a=h@d44a38c) interface
+   - Select the ```Global``` tenant (if prompted) 
    - Select the **[Discover](https://dashboards-sf-e1bf1f9f-be6a-4a59-9980-0918531dd856.cls-17.cloud.logs.services.eu10.hana.ondemand.com/app/data-explorer/discover#?_a=h@b1ee6ce&_g=h@42b0d52&_q=h@fd5d437)** tab (burger menue to the top left) to navigate to the log message flow
 
     <br><img src="/exercises/ex1/images/01_03_0008.png" />
 
 *Cloud Logging Discover interface showing active log message ingestion*
 
-2. **Validate log message arrival:**
-   - Confirm that log messages are actively flowing into the system
+1. **Validate log message arrival:**
+   - Confirm that log messages are actively flowing into the system (e.g. wait a couple of seconds, use the "Refresh"-Button on top right)
    - Check timestamp freshness to verify real-time data collection
 
 **Technical Context:** The "Discover" interface is built on OpenSearch Dashboards, providing powerful log search, filtering, and analysis capabilities. This validates that the complete observability pipeline from applications through SAP Cloud Logging is functioning correctly.
@@ -272,9 +285,13 @@ This unified observability approach ensures continuous monitoring coverage despi
 **Actions to perform:**
 
 1. **Navigate to Continuous Integration and Delivery application:**
-   - Access BTP Cockpit and navigate to your Cloud Foundry space
-   - Go to **Services** → **Instances and Subscriptions**
-   - Locate the Application → "**[Continuous Integration and Delivery](https://xp265-shared-4t2shozq.eu10.cicd.cloud.sap/ui/index.html)**"
+   - Access BTP Cockpit and navigate the Subaccount **[XP265_SHARED](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/subaccountoverview)**
+   - Go to **Services** → **Instances and Subscriptions** on the left navigation bar
+   - Locate the Application → "**[Continuous Integration and Delivery](https://xp265-shared-4t2shozq.eu10.cicd.cloud.sap/ui/index.html)**" and click on the blue hyperlink.
+   - If prompted for additional authentication, select the identity provider line: `a8z641mqa.accounts.ondemand.com`
+
+> [!IMPORTANT]
+> Do *not* select **Default Identity Provider**
 
 <details>
     <summary>📷💡 View screenshot for this step</summary>
