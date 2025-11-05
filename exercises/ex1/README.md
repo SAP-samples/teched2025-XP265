@@ -33,12 +33,6 @@ Each check directly supports the operational excellence required for your upcomi
 
 Inside the SAP BTP Cockpit click on Subaccount **[XP265_SHARED](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/subaccountoverview)**  
 
-<details>
-    <summary>📷💡 View example Onboarding Email</summary>
-<br>![](/exercises/ex1/images/01_01_0001.png)  
-</details>
-<br>
-
 **Actions to perform:**
 1. Click on **Cloud Foundry** and then **Spaces** in the left navigation pane  
 <br>![](/exercises/ex1/images/01_01_0002.png)
