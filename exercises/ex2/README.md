@@ -122,7 +122,7 @@ Drill down on the ```ukrs01.incidents``` request and select the ```oterBar::Stan
 
 1. Select a row with a higher "Response Time" in the "Execution Time" column (these typically involve more processing and backend calls, making them more informative for analysis).
 
-Alternatively you can as well find a direct link to a good example [here](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap/shell/run?sap-ui-app-id=sap.crun.rum.ui#/Requests/Actions/Executions/91af64fb-5132-fa85-0000-0000154ec084/?ExecutionTimestamp=2025-10-28T14:45:20Z&ExecutionType=S&NAME1=ukrs01.incidents&NAME2=oterBar%25253A%25253AStandardAction%25253A%25253ASave_press&RECTYPE=SAP_UI5&Scopes=&TimeFrame=INHERIT&User=).
+Alternatively you can as well find a direct link to a good example [here](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap/shell/run?sap-ui-app-id=sap.crun.rum.ui#/Requests/Actions/Executions/0db11544-6937-4920-0000-0000154ec084/?ExecutionTimestamp=2025-11-05T05:44:34Z&ExecutionType=S&NAME1=ukrs01.incidents&NAME2=oterBar%25253A%25253AStandardAction%25253A%25253ASave_press&RECTYPE=SAP_UI5&Scopes=fd00ca52-bc70-4148-8e34-11398d201d4c&TimeFrame=INHERIT&User=).
 
 
 <br><img src="/exercises/ex2/images/02_01_0023.png" />
@@ -178,7 +178,7 @@ SAP Cloud ALM is a cloud-based application lifecycle management tool included in
 
 ## 2.2 SAP Cloud Logging - Overall System State
 
-**Learning Opportunity**: After completing these steps you will be able to monitor key aspects of the distributed system monitoring
+**Learning Opportunity**: After completing these steps you will be able to monitor key aspects of your BTP workload on Cloud Foundry
 
 **What you'll see:**
 - Service introduction panel
