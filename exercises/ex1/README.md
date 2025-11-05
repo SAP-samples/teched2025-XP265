@@ -200,7 +200,7 @@ Instance memory can be allocated up to the available disk space quota or up to t
 
 *Service instances overview and where to select "SAP Cloud Logging"*
 
-1. **Validate service plan capacity & application binding:**
+2. **Validate service plan capacity & application binding:**
    - Click on the main Cloud Logging service instance to [open details](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/org/6c903df1-d869-4d7d-8483-6f306d5962c7/space/0cb720c5-4bc3-4eb6-8b93-60f0f4d23904/service-instances&//detail/e1bf1f9f-be6a-4a59-9980-0918531dd856/?layout=TwoColumnsMidExpanded)
    - Verify the **Service Plan** shows "standard" or "large"
    - Verify the **Bound Application** shows "incident-management-srv" and "incident-feedback-srv"
@@ -232,7 +232,7 @@ Instance memory can be allocated up to the available disk space quota or up to t
 
 *Cloud Logging Discover interface showing active log message ingestion*
 
-1. **Validate log message arrival:**
+2. **Validate log message arrival:**
    - Confirm that log messages are actively flowing into the system (e.g. wait a couple of seconds, use the "Refresh"-Button on top right)
    - Check timestamp freshness to verify real-time data collection
 
@@ -265,10 +265,11 @@ This unified observability approach ensures continuous monitoring coverage despi
 
 
 **Further References:**
-- [SAP Cloud ALM Documentation](https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal.html)
+- [BTP Developer Guide - Chapter: Establish End-to-End Observability](https://help.sap.com/docs/BTP/0c8c1db388f645159e134a005aaabbcf/34065a44e2ef4907a7482221ce3383ec.html?locale=en-US&state=PRODUCTION&version=Cloud)
+- [SAP Cloud ALM - Expert Portal](https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal.html)
 - [SAP Cloud ALM onboarding and instrumentation](https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/data-collection-infrastructure.html)
-- [SAP Cloud Logging Service Guide](https://help.sap.com/docs/cloud-logging)
-- [BTP Developer Guide on Observability](https://help.sap.com/docs/BTP/0c8c1db388f645159e134a005aaabbcf/34065a44e2ef4907a7482221ce3383ec.html?locale=en-US&state=PRODUCTION&version=Cloud)
+- [SAP Cloud Logging - help.sap.com](https://help.sap.com/docs/cloud-logging)
+- [SAP Cloud Logging - discover center](https://discovery-center.cloud.sap/serviceCatalog/cloud-logging)
 
 
 ## 1.4 Check: Automated Delivery
