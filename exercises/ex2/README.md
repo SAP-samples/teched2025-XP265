@@ -26,8 +26,8 @@ When your system goes public and real users start creating incidents, you need t
       - [Prerequisites](#prerequisites-1)
       - [Step 1. Navigate to the real-user monitoring tile in SAP Cloud ALM](#step-1-navigate-to-the-real-user-monitoring-tile-in-sap-cloud-alm)
       - [Step 2. Select the Workzone component](#step-2-select-the-workzone-component)
-      - [Step 3. Review an individual requests executed by synthetic clients](#step-3-review-an-individual-requests-executed-by-synthetic-clients)
-      - [Step 4. Explore the single transaction](#step-4-explore-the-single-transaction)
+      - [Step 3. Review individual requests executed by synthetic clients](#step-3-review-individual-requests-executed-by-synthetic-clients)
+      - [Step 4. Explore the single transaction with different views](#step-4-explore-the-single-transaction-with-different-views)
       - [Step 5. Check availability of a navigation link towards SAP Cloud Logging Service](#step-5-check-availability-of-a-navigation-link-towards-sap-cloud-logging-service)
       - [Exercise Summary](#exercise-summary)
   - [2.2 SAP Cloud Logging - Overall System State](#22-sap-cloud-logging---overall-system-state)
@@ -35,7 +35,7 @@ When your system goes public and real users start creating incidents, you need t
       - [Step 1. Navigate to SAP Cloud Logging](#step-1-navigate-to-sap-cloud-logging)
       - [Step 2: Access SAP Cloud Logging and navigate to the Cloud Foundry Observability Dashboard](#step-2-access-sap-cloud-logging-and-navigate-to-the-cloud-foundry-observability-dashboard)
       - [Step 3. Explore the "CF Overview" Dashboard](#step-3-explore-the-cf-overview-dashboard)
-      - [Step 4. Review the other dashboards available within SAP Cloud Logging](#step-4-review-the-other-dashboards-available-within-sap-cloud-logging)
+      - [Step 4. Briefly review other dashboards available within SAP Cloud Logging](#step-4-briefly-review-other-dashboards-available-within-sap-cloud-logging)
       - [Exercise Summary](#exercise-summary-1)
   - [2.3 SAP Cloud Logging - Log Analytics Interface](#23-sap-cloud-logging---log-analytics-interface)
       - [Step 1. Analyze the "Requests and Logs" dashboard](#step-1-analyze-the-requests-and-logs-dashboard)
@@ -49,13 +49,8 @@ When your system goes public and real users start creating incidents, you need t
       - [Step 4. Examine error rate monitoring and status code analysis](#step-4-examine-error-rate-monitoring-and-status-code-analysis)
       - [Step 5. Review container metrics and resource utilization](#step-5-review-container-metrics-and-resource-utilization)
       - [Exercise Summary](#exercise-summary-3)
-  - [2.5 SAP Cloud Logging - Distributed System Monitoring - Trace Analytics with OpenTelemetry](#25-sap-cloud-logging---distributed-system-monitoring---trace-analytics-with-opentelemetry)
-      - [Step X. Access "Observability" -\> "Traces" and there "Service" and "Trace"](#step-x-access-observability---traces-and-there-service-and-trace)
-      - [Step X. Check the detected services in the selected timeframe - increase the timeframe to 1h](#step-x-check-the-detected-services-in-the-selected-timeframe---increase-the-timeframe-to-1h)
-      - [Step X. Switch to Traces - Filter and sort the list of traces](#step-x-switch-to-traces---filter-and-sort-the-list-of-traces)
-      - [Step X. Select a specific Trace Group](#step-x-select-a-specific-trace-group)
-      - [Step X. Display a trace](#step-x-display-a-trace)
   - [Summary](#summary)
+
 </details>
 
 #### Prerequisites
@@ -66,7 +61,7 @@ If prompted below for "Sign In", you can follow the login description to the sys
 ## 2.1 SAP Cloud ALM - Central Observability with Real User Monitoring
 
 
-**Learning Opportunity**: After completing these steps you will be able to understand how user interact with your system landscape and see their interactions in Observability solutions.
+**Learning Opportunity**: After completing these steps you will be able to understand how users interact with your system landscape and see their interactions in Observability solutions.
 
 #### Prerequisites
 
@@ -87,7 +82,7 @@ For This Exercise a direct link to the **[SAP Cloud ALM tenant](https://xp265-sh
 In [Exercise 1](../ex1/README.md#13-check-observability-tool-validation---sap-cloud-logging-and-sap-cloud-alm-connection-validation) we already showed the **Launchpad** of SAP Cloud ALM and the tile **Real User Monitoring** now we build upon that. 
 
 #### Step 1. Navigate to the [real-user monitoring tile](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap/shell/run?sap-ui-app-id=sap.crun.rum.ui) in SAP Cloud ALM
-if you are prompted for a additional Sign In, select the line stating ```a8z641mqa.accounts.ondemand.com```and NOT the ```Default Identity Provider```
+If you are prompted for an additional Sign In, select the line stating ```a8z641mqa.accounts.ondemand.com``` and NOT the ```Default Identity Provider```
 
 <details>
     <summary>📷💡 View screenshot for this step</summary>
@@ -114,7 +109,7 @@ Our app is regularly checked with a synthetic browser monitor and a scenario of 
 <br><img src="/exercises/ex2/images/02_01_0011.png" />
 *SAP Cloud ALM navigate to the Workzone tile and preparation for Step 3*
 
-#### Step 3. Review an individual requests executed by synthetic clients
+#### Step 3. Review individual requests executed by synthetic clients
 
 Drill down on the ```ukrs01.incidents``` request and select the ```oterBar::StandardAction::Save_press``` action. When the save action is pressed, an incident has a change status, respective backend-calls and database statements persisting the new status can be seen in our Observability solutions.
 
@@ -153,7 +148,7 @@ Then deselect the "**Timeline**" view again and navigate to "**Orientation: Left
 #### Step 5. Check availability of a navigation link towards SAP Cloud Logging Service
 
 **Actions to perform:**
-1. Switch back to the **Orientation: Left to right"** view or **Orientation: Top to Bottom** view (top right) - if not performed as part of Step 4.
+1. Switch back to the **Orientation: Left to Right** view or **Orientation: Top to Bottom** view (top right) - if not performed as part of Step 4.
 
 2. On the ```incident-management-srv``` tile, click the link icon and select ```Show detailed trace in Cloud Logging``` from the popup menu.
 
@@ -361,7 +356,7 @@ Since our production setup runs across multiple instances, we'll focus specifica
     <br><img src="/exercises/ex2/images/02_03_0022.png" />
 *The Runtime Logs panel showing drill-down filtering options to isolate specific application instances*
 
-1. **Maximize the runtime logs view:**
+3. **Maximize the runtime logs view:**
    - Click the **three-dot context menu** in the top-right corner of the **Runtime Logs** panel
    - Select **"Maximize"** to expand the panel to full-screen view
    - Review deployment steps, container restarts, crashes, and other platform-level events
@@ -370,7 +365,7 @@ Since our production setup runs across multiple instances, we'll focus specifica
 
 *The maximized Runtime Logs panel providing detailed view of platform events and deployment history*
 
-2. **Return to overview:**
+4. **Return to overview:**
    - Use the **three-dot context menu** again to **minimize** the panel
    - Return to the full **"Requests and Logs"** overview displaying all three panels
 
@@ -452,7 +447,7 @@ Distributed System Monitoring of SAP Cloud Logging helps DevOps teams proactivel
 *The Four Golden Signals Dashboard showing all signal panels with comprehensive metrics overview*
 
 3. **Reset time range to broader view:**
-   - Click on **Quick select**-icont left to the **Start Date** field in the top-right 
+   - Click on **Quick select** icon to the left of the **Start Date** field in the top-right 
    - Select **Last** from the dropdown (if required)
    - Set the value to **5** **hours**
    - Click on **Apply**
@@ -461,7 +456,7 @@ Distributed System Monitoring of SAP Cloud Logging helps DevOps teams proactivel
 
 *Time range configuration interface showing relative time selection for 5 hours from now*
 
-1. **Navigate to Latency dashboard:**
+4. **Navigate to Latency dashboard:**
    - Click on the **[Latency](https://dashboards-sf-e1bf1f9f-be6a-4a59-9980-0918531dd856.cls-17.cloud.logs.services.eu10.hana.ondemand.com/app/dashboards?security_tenant=global#/view/maintained-by-perfx_cf-content-package_CF-Latency?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-5h,to:now))&_a=(description:'Use%20the%20Latency%20dashboard%20to%20investigate%20the%20latency%20of%20your%20system%20and%20applications.%20%5Bmaintained%20by%20SAP%5D',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!f),query:(language:kuery,query:''),timeRestore:!f,title:'CF%20Latency',viewMode:view))** tab in the navigation menu to perform Step 2
 
 
@@ -545,7 +540,7 @@ Distributed System Monitoring of SAP Cloud Logging helps DevOps teams proactivel
 
 **Actions to perform:**
 
-1. **Navigate to **Errors** dashboard:**
+1. **Navigate to Errors dashboard:**
    - Click on the **[Errors](https://dashboards-sf-e1bf1f9f-be6a-4a59-9980-0918531dd856.cls-17.cloud.logs.services.eu10.hana.ondemand.com/app/dashboards?security_tenant=global#/view/maintained-by-perfx_cf-content-package_CF-Errors?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-5h,to:now))&_a=(description:'CF%20Four%20Golden%20Signals%20-%20Error%20Focus%20View%20%5Bmaintained%20by%20SAP%5D',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!f),query:(language:kuery,query:''),timeRestore:!f,title:'CF%20Errors',viewMode:view))** tab in the dashboard navigation
 
 2. **Analyze error patterns:**
@@ -562,7 +557,7 @@ Distributed System Monitoring of SAP Cloud Logging helps DevOps teams proactivel
 <br><img src="/exercises/ex2/images/02_04_0025.png" />
 *Errors dashboard showing HTTP status code distributions and detailed error message analysis*
 
-1. **Navigate to Container Metrics dashboard:**
+4. **Navigate to Container Metrics dashboard:**
    - Click on the **[Container Metrics](https://dashboards-sf-e1bf1f9f-be6a-4a59-9980-0918531dd856.cls-17.cloud.logs.services.eu10.hana.ondemand.com/app/dashboards?security_tenant=global#/view/maintained-by-perfx_otel-content-package_OTel-CF-Container-Metrics?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-5h,to:now))&_a=(description:'Explore%20container%20metrics%20emitted%20by%20the%20CloudFoundry%20runtime%20environment.',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!f),query:(language:kuery,query:''),timeRestore:!f,title:'%5BOTel%5D%20%5BCF%5D%20Container%20Metrics',viewMode:view))** tab in the navigation menu
 
 

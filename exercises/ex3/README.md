@@ -35,7 +35,7 @@ To announce the incident, employees were notified with the following message:
 > 
 >We appreciate your patience and cooperation as we work to resolve this matter.
 
-A few hours, hundreds (maybe thousands) of employees started reporting incidents by
+A few hours later, hundreds (maybe thousands) of employees started reporting incidents by
 accessing the Incident Management application (via the link provided) at the same time. As a result, a huge number of
 requests (traffic) hit the application, leading to a sudden spike in applications resource
 usage (CPU, memory)
@@ -55,7 +55,7 @@ Login to the system as described in the [General Section](../ex0/README.md#start
 
 #### Step 1. Click on the subaccount named `XP265_SHARED` to navigate to the subaccount overview page. Click on the space named `XP265` to navigate to the space overview page
 
-   ![3.sub-account-overview.png](../ex3/images/3.sub-account-overview.png)
+   ![3.sub-account-overview.png](images/3.sub-account-overview.png)
    
 #### Step 2. Navigate to the [incident-management-srv application](https://emea.cockpit.btp.cloud.sap/cockpit?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/org/6c903df1-d869-4d7d-8483-6f306d5962c7/space/0cb720c5-4bc3-4eb6-8b93-60f0f4d23904/app/d1fbbec7-6739-49db-a815-33927ad3b0ea/overview) to view application overview page
 
@@ -97,9 +97,9 @@ Next, verify the application scaling policy
    ```
 **Understand Scaling Policy**
 
-The scaling policy above indicates that the application can scale between 2 and 5 instances based on the throughput metric. If the throughput exceeds 40 requests per second for a duration of 60 seconds (1 minute), the application will scale up by 2 instance. 
+The scaling policy above indicates that the application can scale between 2 and 5 instances based on the throughput metric. If the throughput exceeds 40 requests per second for a duration of 60 seconds (1 minute), the application will scale up by 2 instances. 
 
-Conversely, if the throughput drops below 10 requests per second for a duration of 180 seconds (3 minutes), the application will scale down by 2 instance.
+Conversely, if the throughput drops below 10 requests per second for a duration of 180 seconds (3 minutes), the application will scale down by 2 instances.
 
 
 ## 3.3 Simulate Traffic Spike
@@ -108,7 +108,7 @@ Instead of actually sending actual notification to all employees, we will simula
 
 > NOTE: Your lab instructor will apply load on the application centrally for all the participants. You (as participant) can observe the scaling behavior of the application as described in the next section. For instructors: refer to the [Instructor Tasks for Exercise 3](./instructors-tasks/README.md) for more details.
 
-This result in a sudden increase in the application's resource usage (CPU, memory, throughput), which will trigger the autoscaling mechanism based on the configured scaling policy.
+This results in a sudden increase in the application's resource usage (CPU, memory, throughput), which will trigger the autoscaling mechanism based on the configured scaling policy.
 
 
 ## 3.4 Verify Application Scaling

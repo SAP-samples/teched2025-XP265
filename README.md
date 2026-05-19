@@ -49,7 +49,6 @@ Walk away with confidence to approve production releases, armed with practical s
     - [Start here to understand your target application](exercises/ex0#start-here-to-understand-your-target-application)
     - [Summary](exercises/ex0#summary)
 - [Exercise 1 - Production Readiness Checks](exercises/ex1/)
-    - [Exercise 1 - Production Readiness Checks](exercises/ex1#exercise-1---production-readiness-checks)
     - [1.1 Check: Basic Platform Monitoring and Log Validation](exercises/ex1#11-check-basic-platform-monitoring-and-log-validation)
     - [1.2 Check: Instance Sizing Validation](exercises/ex1#12-check-instance-sizing-validation)
     - [1.3 Check: Observability Tool Validation - SAP Cloud Logging and SAP Cloud ALM Connection Validation](exercises/ex1#13-check-observability-tool-validation---sap-cloud-logging-and-sap-cloud-alm-connection-validation)

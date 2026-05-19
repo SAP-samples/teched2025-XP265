@@ -116,7 +116,7 @@ generate_toc() {
         # Generate main exercise link
         if [[ "$ex_num" == "0" ]]; then
             echo "[DEBUG] Generating 'Getting Started' link" >&2
-	    echo "- [Exercise 0 - General Information and Prerequisites (Optional)](exercises/$dir_name/)"
+	    echo "- [Getting Started - General Information and Prerequisites (Optional)](exercises/$dir_name/)"
         else
             echo "[DEBUG] Generating main exercise link for ex$ex_num" >&2
             # Use the H1 title directly (it already contains "Exercise X - Description")

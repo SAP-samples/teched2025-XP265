@@ -1,7 +1,5 @@
 # Exercise 1 - Production Readiness Checks
 
-## Exercise 1 - Production Readiness Checks
-
 **The Go/No-Go Decision Point**
 
 With your incident management application deployed and the executive launch review just 48 hours away, it's time for the critical production readiness assessment. As the DevOps engineer responsible for the successful public launch, you cannot afford operational blind spots during the high-visibility go-live event.
@@ -68,7 +66,7 @@ The SAP BTP cockpit's Logs page displays application logs and related Cloud Foun
 **Further References**:
 * [SAP BTP Cloud Foundry - Using Application Logs](https://help.sap.com/docs/btp/sap-business-technology-platform/using-application-logs)
 * [App logging in Cloud Foundry](https://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html)
-* [Overview of Cloud Foundry Application Logs](https://developers.sap.com/tutorials/cp-cf-application-logs-overview..html)
+* [Overview of Cloud Foundry Application Logs](https://developers.sap.com/tutorials/cp-cf-application-logs-overview.html)
 
 ## 1.2 Check: Instance Sizing Validation
 
@@ -102,8 +100,8 @@ Instance memory can be allocated up to the available disk space quota or up to t
 
 
 **Further References**:
-* [Creating and modifiying quota plans in Cloud Foundry](https://docs.cloudfoundry.org/adminguide/quota-plans.html)
-* [Increasing the Quota for dhe Cloud Foundry Runtime](https://help.sap.com/docs/btp/sap-business-technology-platform/increasing-quota-for-cloud-foundry-runtime-optional)
+* [Creating and modifying quota plans in Cloud Foundry](https://docs.cloudfoundry.org/adminguide/quota-plans.html)
+* [Increasing the Quota for the Cloud Foundry Runtime](https://help.sap.com/docs/btp/sap-business-technology-platform/increasing-quota-for-cloud-foundry-runtime-optional)
 
 
 ## 1.3 Check: Observability Tool Validation - SAP Cloud Logging and SAP Cloud ALM Connection Validation
@@ -314,7 +312,7 @@ After GA, changes are still made to the application. New features, security patc
 
 **Further References**:
 * [SAP Continuous Integration and Delivery](https://help.sap.com/docs/continuous-integration-and-delivery?locale=en-US)
-* [Get Started with an SAP Fiori Project in SAP Continuous Integration and Delivery](https://developers.sap.com/tutorials/cicd-start-fiori..html)
+* [Get Started with an SAP Fiori Project in SAP Continuous Integration and Delivery](https://developers.sap.com/tutorials/cicd-start-fiori.html)
 
 ## Summary
 
