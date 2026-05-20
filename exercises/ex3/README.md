@@ -23,7 +23,7 @@ This isn't just about adding more instances—it's about proving your architectu
 
 ## Exercise Background
 
-Find a general description of the application you are responsible [here](../ex0/README.md#scenario-description-and-system-landscape)
+Find a general description of the application you are responsible for [here](../ex0/README.md#scenario-description-and-system-landscape)
 
 Today, a major incident has occurred, drawing the attention of all employees. As a result, everyone is accessing the application simultaneously to view the incident. This sudden surge in traffic has caused a significant spike in the application's resource usage (CPU)
 
@@ -37,7 +37,7 @@ To announce the incident, employees were notified with the following message:
 
 A few hours later, hundreds (maybe thousands) of employees started reporting incidents by
 accessing the Incident Management application (via the link provided) at the same time. As a result, a huge number of
-requests (traffic) hit the application, leading to a sudden spike in applications resource
+requests (traffic) hit the application, leading to a sudden spike in application's resource
 usage (CPU, memory)
 
 > For the purpose of this exercise, the lab instructor will simulate the traffic spike by sending multiple requests to the application via
@@ -104,7 +104,7 @@ Conversely, if the throughput drops below 10 requests per second for a duration 
 
 ## 3.3 Simulate Traffic Spike
 
-Instead of actually sending actual notification to all employees, we will simulate the traffic spike by sending multiple requests to the application using a command line tool called `oha`.
+Instead of actually sending an actual notification to all employees, we will simulate the traffic spike by sending multiple requests to the application using a command line tool called `oha`.
 
 > NOTE: Your lab instructor will apply load on the application centrally for all the participants. You (as participant) can observe the scaling behavior of the application as described in the next section. For instructors: refer to the [Instructor Tasks for Exercise 3](./instructors-tasks/README.md) for more details.
 
@@ -128,7 +128,7 @@ In this exercise, you (as a participant) will verify that the application scales
 
 ## 3.5 Cleanup
 
-After the simulated load is over (after few minutes), the application scales down to the minimum number of instances configured in the scaling policy (2 instances in this case).
+After the simulated load is over (after a few minutes), the application scales down to the minimum number of instances configured in the scaling policy (2 instances in this case).
 
 # Summary
 

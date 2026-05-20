@@ -1,11 +1,11 @@
 # Exercise 0 - General Information and Prerequisites (optional)
 
 > [!IMPORTANT]
-> The below information and Exercise 0 is provided for further Background information and not necessarily required to fullfill this hands on. 
+> The below information and Exercise 0 is provided for further Background information and not necessarily required to fulfill this hands on. 
 >
 > If you want to directly start, please go to the [Exercise 1 - Production Readiness Checks](../ex1/README.md).
 >
-> E.g. below you find information how to [Sign In](#start-here-and-get-access-to-the-backend-system-and-btp-cockpit) and [how to use the application](#start-here-to-explore-the-incident-management-application).
+> E.g. below you find information how to [Sign In](#start-here-and-get-access-to-the-backend-system-and-btp-cockpit) and [how to use the application](#start-here-to-understand-your-target-application).
 
 ## Scenario Description And System Landscape
 
@@ -58,7 +58,7 @@ You will get redirected to the **Incident-Management** overview page.
 
 ![5.incidentapp-standard.png](../ex0/images/5.incidentapp-standard.png)
 
-In the Incident-Management application overview you can search, filter and create an new incident. 
+In the Incident-Management application overview you can search, filter and create a new incident. 
 
 #### Step 2. Create an incident
 
@@ -71,7 +71,7 @@ After successfully creating the incident, simply click the back button in your b
 
 * Click the navigation arrow above the application
 * Enter _Problem with_ in the search field
-* Click _GO_ to search and find the new created incident
+* Click _GO_ to search and find the newly created incident
 
 ![7.show-new-incident.png](../ex0/images/7.show-new-incident.png)
 

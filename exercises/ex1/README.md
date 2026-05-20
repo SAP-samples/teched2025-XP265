@@ -218,7 +218,7 @@ Instance memory can be allocated up to the available disk space quota or up to t
 1. **Access Cloud Logging interface:**
    - From the service instance details above, click on the link "xp265-cl" in the beginning of the row OR navigate directly to the main [Cloud Logging Service (CLS)](https://dashboards-sf-e1bf1f9f-be6a-4a59-9980-0918531dd856.cls-17.cloud.logs.services.eu10.hana.ondemand.com/app/dashboards#/view/maintained-by-perfx_using-your-instance-content-package_Using-your-CLS-instance?_g=h@42b0d52&_a=h@d44a38c) interface
    - Select the ```Global``` tenant (if prompted) 
-   - Select the **[Discover](https://dashboards-sf-e1bf1f9f-be6a-4a59-9980-0918531dd856.cls-17.cloud.logs.services.eu10.hana.ondemand.com/app/data-explorer/discover#?_a=h@b1ee6ce&_g=h@42b0d52&_q=h@fd5d437)** tab (burger menue to the top left) to navigate to the log message flow
+   - Select the **[Discover](https://dashboards-sf-e1bf1f9f-be6a-4a59-9980-0918531dd856.cls-17.cloud.logs.services.eu10.hana.ondemand.com/app/data-explorer/discover#?_a=h@b1ee6ce&_g=h@42b0d52&_q=h@fd5d437)** tab (burger menu to the top left) to navigate to the log message flow
 
     <br><img src="/exercises/ex1/images/01_03_0008.png" />
 
@@ -237,7 +237,7 @@ Instance memory can be allocated up to the available disk space quota or up to t
 #### Exercise Summary
 
 
-**Result:** ✅ SAP Cloud Logging and SAP Cloud ALM is properly connected and receiving observability data from BTP applications.
+**Result:** ✅ SAP Cloud Logging and SAP Cloud ALM are properly connected and receiving observability data from BTP applications.
 
 **Technical Benefits:**
 - **Unified Observability**: Entry points for Central and Local Observability use cases via SAP Cloud ALM and SAP Cloud Logging.

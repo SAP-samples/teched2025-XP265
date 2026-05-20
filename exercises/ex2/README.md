@@ -74,7 +74,7 @@ Upon successful onboarding to SAP Cloud ALM, your organization will receive a co
 *Example of an onboarding Email - just provided as example*
 </details>
 
-For This Exercise a direct link to the **[SAP Cloud ALM tenant](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap)** is provided below for convenience during this hands-on session. You don't need to access your Email-program.
+For this exercise a direct link to the **[SAP Cloud ALM tenant](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap)** is provided below for convenience during this hands-on session. You don't need to access your Email-program.
 
 > [!NOTE]
 > In production environments, always use the official tenant URL provided in your individual onboarding email of your Company.
@@ -103,7 +103,7 @@ Only if you open the Real User Monitoring app the **first time**, you will be pr
 <br><img src="/exercises/ex2/images/02_01_0021.png" />
 </details>
 
-Our app is regularly checked with a synthetic browser monitor and a scenario of Incident Management is being clicked through. While the browser sees the workzone component initially, internally calls are being made to backend components, the database and the S4/HANA system.
+Our app is regularly checked with a synthetic browser monitor and a scenario of Incident Management is being clicked through. While the browser sees the workzone component initially, internal calls are being made to backend components, the database and the S4/HANA system.
 
 1. Click on **XP265_WZ** to see a list of individual requests sent to the backend 
 <br><img src="/exercises/ex2/images/02_01_0011.png" />
@@ -163,12 +163,12 @@ This opens the detailed transaction trace showing how the incident-management-sr
 **Result**: Visibility into User-interactions with current status information for the deployed workload
 
 **Background**:
-SAP Cloud ALM is a cloud-based application lifecycle management tool included in SAP Cloud Service plans like Enterprise and Large Enterprise Support. It helps organizations manage hybrid and cloud solutions on SAP BTP with guided setup and automation for SAP and custom apps. SAP Cloud ALM is integrated with SAP Cloud Logging for deep dive analysis in various scenarios. In this case it allows further drill-down into the end2end transaction and BTP workload of the ```incident-management-srv``` application for distributed system monitoring (see below for more details)
+SAP Cloud ALM is a cloud-based application lifecycle management tool included in SAP Cloud Service plans like Enterprise and Large Enterprise Support. It helps organizations manage hybrid and cloud solutions on SAP BTP with guided setup and automation for SAP and custom apps. SAP Cloud ALM is integrated with SAP Cloud Logging for deep dive analysis in various scenarios. In this case it allows further drill-down into the end-to-end transaction and BTP workload of the ```incident-management-srv``` application for distributed system monitoring (see below for more details)
 
 **Further References**:
-- https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal.html
-- https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/real-user-monitoring.html
-- https://help.sap.com/docs/cloud-alm/applicationhelp/real-user-monitoring
+- [SAP Cloud ALM - Expert Portal](https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal.html)
+- [SAP Cloud ALM - Real User Monitoring](https://support.sap.com/en/alm/sap-cloud-alm/operations/expert-portal/real-user-monitoring.html)
+- [Real User Monitoring - SAP Help](https://help.sap.com/docs/cloud-alm/applicationhelp/real-user-monitoring)
 
 
 ## 2.2 SAP Cloud Logging - Overall System State
@@ -293,8 +293,8 @@ On the right navigation users can switch between Cloud Foundry and Kyma (Kyma no
 SAP Cloud Logging is an OpenSearch-based observability service that centralizes log, metrics, and trace analysis across SAP BTP environments with pre-built monitoring dashboards.
 
 **Further References**:
-- https://help.sap.com/docs/cloud-logging
-- https://discovery-center.cloud.sap/serviceCatalog/cloud-logging
+- [SAP Cloud Logging Documentation](https://help.sap.com/docs/cloud-logging)
+- [SAP Cloud Logging - Discovery Center](https://discovery-center.cloud.sap/serviceCatalog/cloud-logging)
 - Explore more capabilities of the "Discover" tab in the [OpenSearch Dashboard](https://docs.opensearch.org/2.19/dashboards/discover/index-discover) documentation
 - Understand different query options, pins and more with the [OpenSearch Dashboard Query Language](https://docs.opensearch.org/2.19/dashboards/dql/), [Query DSL
 ](https://docs.opensearch.org/2.19/query-dsl/) and [PPL](https://docs.opensearch.org/2.19/search-plugins/sql/ppl/index/).
