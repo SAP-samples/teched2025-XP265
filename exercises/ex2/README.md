@@ -111,17 +111,28 @@ Our app is regularly checked with a synthetic browser monitor and a scenario of 
 
 #### Step 3. Review individual requests executed by synthetic clients
 
-Drill down on the ```ukrs01.incidents``` request and select the ```oterBar::StandardAction::Save_press``` action. When the save action is pressed, an incident has a change status, respective backend-calls and database statements persisting the new status can be seen in our Observability solutions.
+To see which user actions generate backend calls, we add the "Action" dimension to the requests view:
+
+1. Click the **Dimensions** button (①) in the top-right toolbar area
+2. In the Dimensions popup, check **Action** to add it as a column (②)
 
 <br><img src="/exercises/ex2/images/02_01_0022.png" />
 
-1. Select a row with a higher "Response Time" in the "Execution Time" column (these typically involve more processing and backend calls, making them more informative for analysis).
+3. The list now shows each request with its action name. Filter for the ```ukrs01.incidents``` request name (③) to focus on the incident management application traffic.
 
-Alternatively you can as well find a direct link to a good example [here](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap/shell/run?sap-ui-app-id=sap.crun.rum.ui#/Requests/Actions/Executions/0db11544-6937-4920-0000-0000154ec084/?ExecutionTimestamp=2025-11-05T05:44:34Z&ExecutionType=S&NAME1=ukrs01.incidents&NAME2=oterBar%25253A%25253AStandardAction%25253A%25253ASave_press&RECTYPE=SAP_UI5&Scopes=fd00ca52-bc70-4148-8e34-11398d201d4c&TimeFrame=INHERIT&User=).
+<br><img src="/exercises/ex2/images/02_01_0022_2.png" />
 
+4. Locate the ```oterBar::StandardAction::Save_press``` action row (④). When the save action is pressed, an incident changes status, and the respective backend calls and database statements can be observed. Select a row with a higher "Response Time" — these typically involve more processing and backend calls, making them more informative for analysis.
+
+<br><img src="/exercises/ex2/images/02_01_0022_3.png" />
+
+Alternatively you can find a direct link to a filtered view [here](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap/shell/run?sap-ui-app-id=sap.crun.rum.ui#/RequestsDimension/custom?Dimensions=NAME1,RECTYPE,ACTION&NAME1=%252522ukrs01.incidents%252522&Scopes=fd00ca52-bc70-4148-8e34-11398d201d4c).
+
+5. Select one of the transactions to drill into its execution details:
 
 <br><img src="/exercises/ex2/images/02_01_0023.png" />
 
+6. You end up in the graphical representation of the transaction flow across components — from WorkZone over the Cloud Foundry application down to the database transactions:
 
 <br><img src="/exercises/ex2/images/02_01_0024.png" />
 
@@ -148,9 +159,8 @@ Then deselect the "**Timeline**" view again and navigate to "**Orientation: Left
 #### Step 5. Check availability of a navigation link towards SAP Cloud Logging Service
 
 **Actions to perform:**
-1. Switch back to the **Orientation: Left to Right** view or **Orientation: Top to Bottom** view (top right) - if not performed as part of Step 4.
-
-2. On the ```incident-management-srv``` tile, click the link icon and select ```Show detailed trace in Cloud Logging``` from the popup menu.
+1. On the ```incident-management-srv``` tile, click **Navigation Options** (①)
+2. In the popup menu, under the **External** section, select **Show detailed trace in Cloud Logging** (②)
 
 <br><img src="/exercises/ex2/images/02_01_0027.png" />
 
