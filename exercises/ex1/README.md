@@ -46,16 +46,16 @@ In the **[Application: incident-management-srv - Logs](https://emea.cockpit.btp.
 #### Step 2. Check recent metrics for your application
 
 **Actions to perform:**
-1. Click on **Overview** on the left menu again
+1. Click on **Application Overview** on the left menu again
 
-In the **[Application: incident-management-srv - Overview](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/org/6c903df1-d869-4d7d-8483-6f306d5962c7/space/0cb720c5-4bc3-4eb6-8b93-60f0f4d23904/app/d1fbbec7-6739-49db-a815-33927ad3b0ea/overview)** (optional direct link) we can check the current application capacity utilization and events:
+In the **[Application: incident-management-srv - Application Overview](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/org/6c903df1-d869-4d7d-8483-6f306d5962c7/space/0cb720c5-4bc3-4eb6-8b93-60f0f4d23904/app/d1fbbec7-6739-49db-a815-33927ad3b0ea/overview)** (optional direct link) we can check the current application capacity utilization and events:
 
 <br>![](/exercises/ex1/images/01_01_0004.png)
 
 #### Exercise Summary
 
 **Result**: You can use these logs to identify and troubleshoot application-specific problems and check the 
-container/runtime metrics provided by Cloud Foundry like the CPU utilization, memory usage, and disk usage per app instance, plus instance state.
+container/runtime metrics provided by Cloud Foundry like the CPU entitlement, memory usage, and disk usage per app instance, plus instance state.
 
 **Background**:
 The **SAP BTP cockpit** is the central interface for managing your SAP Business Technology Platform environment. It provides account management, service provisioning, security configuration, and real-time monitoring capabilities, enabling administrators to efficiently manage their BTP landscape.
@@ -74,7 +74,7 @@ The SAP BTP cockpit's Logs page displays application logs and related Cloud Foun
 
 #### Step 1. Validate the number of Instances per Application
 
-  Still within the **Application: incident-management-srv - Overview** we can explore how many instances of our application are started:  
+  Still within the **Application: incident-management-srv - Application Overview** we can explore how many instances of our application are started:  
 <br>![](/exercises/ex1/images/01_02_0001.png)
 
 #### Step 2. Explore the Memory and Disk Settings per Instance
