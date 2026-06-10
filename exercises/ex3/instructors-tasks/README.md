@@ -10,6 +10,8 @@ Steps:
       ```bash
       CF_USER_NAME=<REPLACE_WITH_CF_USER_NAME> CF_USER_PASSWORD=<REPLACE_WITH_CF_USER_PASSWORD> \
       exercises/ex3/instructors-tasks/1.cf-login-extract-creds.sh
+      ```
+      
       
 The script will log in to CF, extract necessary credentials and apply load on the application
 

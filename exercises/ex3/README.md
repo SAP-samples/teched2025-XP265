@@ -81,7 +81,7 @@ Next, verify the application scaling policy
            {
                "metric_type": "throughput",
                "breach_duration_secs": 60,
-               "threshold": 40,
+               "threshold": 20,
                "operator": ">=",
                "adjustment": "+2"
            },
@@ -97,7 +97,7 @@ Next, verify the application scaling policy
    ```
 **Understand Scaling Policy**
 
-The scaling policy above indicates that the application can scale between 2 and 5 instances based on the throughput metric. If the throughput exceeds 40 requests per second for a duration of 60 seconds (1 minute), the application will scale up by 2 instances. 
+The scaling policy above indicates that the application can scale between 2 and 5 instances based on the throughput metric. If the throughput exceeds 20 requests per second for a duration of 60 seconds (1 minute), the application will scale up by 2 instances. 
 
 Conversely, if the throughput drops below 10 requests per second for a duration of 180 seconds (3 minutes), the application will scale down by 2 instances.
 
@@ -118,12 +118,13 @@ In this exercise, you (as a participant) will verify that the application scales
 #### Step 1. Using SAP Business Technology Platform - Cockpit
 
    1. Navigate to the [incident-management-srv application](https://emea.cockpit.btp.cloud.sap/cockpit?idp=a8z641mqa.accounts.ondemand.com#/globalaccount/9e10042e-0fbd-42ed-8cbf-2905b95c6d99/subaccount/52fbaf37-c604-4abf-8580-c97703835dc8/org/6c903df1-d869-4d7d-8483-6f306d5962c7/space/0cb720c5-4bc3-4eb6-8b93-60f0f4d23904/app/d1fbbec7-6739-49db-a815-33927ad3b0ea/overview) to view application overview page
-   2. Observe the number of instances in the "Instances" section
+   2. Observe the number of instances in the " App Instances" section
    3. You should see the number of instances increasing (or increased) as the application scales up to handle the increased traffic
    
    ![10.-verify-scaled-instances-in-cockpit.png](images/10.-verify-scaled-instances-in-cockpit.png)
    
-   ![11.-verify-scaled-instances-in-cockpit.png](images/11.-verify-scaled-instances-in-cockpit.png)
+   ![11.-verify-scaled-instances-running-in-cockpit.png](images/11.-verify-scaled-instances-running-in-cockpit.png)
+   
 
 
 ## 3.5 Cleanup
