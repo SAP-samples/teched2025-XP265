@@ -126,7 +126,7 @@ To see which user actions generate backend calls, we add the "Action" dimension 
 
 <br><img src="/exercises/ex2/images/02_01_0022_3.png" />
 
-Alternatively you can find a direct link to a filtered view [here](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap/shell/run?sap-ui-app-id=sap.crun.rum.ui#/RequestsDimension/Executions/b1629b24-0bec-0905-0000-0000154ec084/?Dimensions=NAME1,RECTYPE,ACTION&ExecutionTimestamp=2026-06-16T08:41:33Z&ExecutionType=S&Instance=&NAME1=%2522ukrs01.incidents%2522&NAME2=%2522oterBar%25253A%25253AStandardAction%25253A%25253ASave_press%2522&RECTYPE=SAP_UI5&Scopes=fd00ca52-bc70-4148-8e34-11398d201d4c&SID=%2522WorkZone%2522&TimeFrame=INHERIT&User=%2522971f612f-b3c1-4513-90af-8dddfb565fe9%2522).
+Alternatively you can find a direct link to a filtered view [here](https://xp265-shared-4t2shozq.eu10-004.alm.cloud.sap/shell/run?sap-ui-app-id=sap.crun.rum.ui#/RequestsDimension/Executions/785a842b-ef0a-cd85-0000-0000154ec084/?Dimensions=NAME1,ACTION&ExecutionTimestamp=2026-06-24T09:44:58Z&ExecutionType=S&Instance=&NAME1=%2522ukrs01.incidents%2522&NAME2=%2522oterBar%25253A%25253AStandardAction%25253A%25253ASave_press%2522&RECTYPE=SAP_UI5&Scopes=fd00ca52-bc70-4148-8e34-11398d201d4c&SID=%2522WorkZone%2522&TimeFrame=INHERIT&User=%2522971f612f-b3c1-4513-90af-8dddfb565fe9%2522).
 
 5. Select one of the transactions to drill into its execution details:
 
